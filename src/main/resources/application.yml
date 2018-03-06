@@ -1,0 +1,6 @@
+spring:
+  application:
+    name: todos-client
+server:
+  port: 8081
+
