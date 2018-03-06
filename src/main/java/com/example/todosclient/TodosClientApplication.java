@@ -4,7 +4,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
-import org.springframework.cloud.openfeign.EnableFeignClients;
+import org.springframework.cloud.netflix.feign.EnableFeignClients;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -34,6 +34,7 @@ public class TodosClientApplication {
 		TodoLight tl = new TodoLight();
 		tl.setId(todos.get(0).getId());
 		tl.setTitle(todos.get(0).getTitle());
+		tl.setHost(todos.get(0).getHostPort());
 		t.add(tl);
 		return ResponseEntity.ok(t);
 	}

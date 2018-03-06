@@ -4,6 +4,15 @@ public class TodoLight {
 
     private Long id;
     private String title;
+    private String host;
+
+    public String getHost() {
+        return host;
+    }
+
+    public void setHost(String host) {
+        this.host = host;
+    }
 
     public Long getId() {
         return id;
